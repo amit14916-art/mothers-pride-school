@@ -40,7 +40,7 @@ const FACILITIES = [
 
 export default function Facilities() {
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-800 bg-grid-pattern pb-20">
+    <div className="bg-school-watermark min-h-screen text-slate-800 pb-20">
       
       {/* Header Banner */}
       <section className="bg-academic-navy text-white py-16 text-center relative overflow-hidden">

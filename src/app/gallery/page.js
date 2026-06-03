@@ -23,131 +23,90 @@ const CATEGORIES = ["All", "Labs", "Sports", "Celebrations"];
 const GALLERY_DATA = [
   {
     id: "GAL001",
-    title: "Next-Gen AI & Python Coding Lab",
+    title: "Computer & Coding Lab in Arang",
     category: "Labs",
-    desc: "A high-performance computational environment where students train machine learning classifiers and script custom software applications.",
-    imgUrl: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800&auto=format&fit=crop",
+    desc: "Our advanced coding environment supported by Abhikalp Foundation, where students from rural and middle-income backgrounds learn modern computer languages.",
+    imgUrl: "/arang_computer_lab.png",
     date: "May 12, 2026",
     details: {
-      hardware: "30x NVIDIA RTX Workstations, Intel i9 Nodes",
-      software: "Python 3.12, PyTorch, Jupyter Notebooks",
-      cohort: "Grades VIII - X Coding Teams",
-      faculty: "Dr. Ananya Sharma, Prof. Amit Singhal"
+      hardware: "Modern Core-i5 Computers, Local Gigabit LAN Network",
+      software: "Scratch Desktop, Python 3.12, Windows 11 Education Suite",
+      cohort: "Grades VI - X Computing Cohorts",
+      faculty: "Gaurav Shukla, Ms. Rashmi Dewangan"
     }
   },
   {
     id: "GAL002",
-    title: "STEM Robotics & Sensor Circuit Lab",
-    category: "Labs",
-    desc: "A hands-on physical engineering cluster for wiring microcontrollers, configuring Arduino boards, and testing autonomous sensory wheels.",
-    imgUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop",
-    date: "April 28, 2026",
+    title: "Sankalp Education Kit Distribution",
+    category: "Celebrations",
+    desc: "A beautiful community ceremony organized by Abhikalp Foundation, where students receive free syllabus kits, uniforms, and textbooks.",
+    imgUrl: "/sankalp_kit_distribution.png",
+    date: "April 18, 2026",
     details: {
-      hardware: "Arduino Uno kits, Raspberry Pi 5 Single Board Nodes",
-      software: "Arduino IDE, MicroPython, Tinkercad Circuits",
-      cohort: "Grades VI - X robotics teams",
-      faculty: "Prof. Vikram Rathore"
+      hardware: "School Kits, Textbooks, Uniforms, Educational Packs",
+      software: "Sankalp Sponsorship Index Board",
+      cohort: "Nursery - Grade X Underprivileged Students",
+      faculty: "Abhikalp Executive Board Volunteers"
     }
   },
   {
     id: "GAL003",
-    title: "Immersive VR Spatial Classroom",
-    category: "Labs",
-    desc: "Interactive learning workspace utilizing standalone spatial VR headsets to explore 3D human anatomy models and astronomy simulations.",
-    imgUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop",
+    title: "Annual Science & STEM Exhibition",
+    category: "Celebrations",
+    desc: "Students proudly displaying hand-wired scientific electric circuit boards and custom physics models during the school science fair.",
+    imgUrl: "/science_exhibition.png",
     date: "March 15, 2026",
     details: {
-      hardware: "Meta Quest 3 Headsets, 85\" 4K Smart Interactive Displays",
-      software: "Unity VR, Blender 3D, CBSE Virtual Assets",
-      cohort: "Nursery - Grade X Explorers",
-      faculty: "Mrs. Evelyn Carter, Ms. Sarah D'Souza"
+      hardware: "Electric Circuit boards, Physics Project kits, wiring nodes",
+      software: "STEM Project logic models",
+      cohort: "Grades VI - X Science Guilds",
+      faculty: "Mr. R.K. Patel"
     }
   },
   {
     id: "GAL004",
-    title: "Inter-House Track & Athletics Meet",
+    title: "Annual Sports Day Track Championships",
     category: "Sports",
-    desc: "Students showcasing incredible athletic speeds and endurance during our annual sports day track championships.",
-    imgUrl: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=800&auto=format&fit=crop",
+    desc: "Our children displaying high speeds and collaborative team efforts on our massive 2-acre school campus playground in Arang.",
+    imgUrl: "/sports_championships.png",
     date: "Feb 18, 2026",
     details: {
-      hardware: "Professional Digital Stopwatch Systems, Custom Tracks",
-      software: "Timing Index SaaS, Digital Leaderboard API",
+      hardware: "Professional Athletics Track gear, Digital Stopwatches",
+      software: "Timing leaderboards database",
       cohort: "All Houses (Red, Navy, Gold, Crimson)",
-      faculty: "Mr. Rajeev Varma (Chief Athletics Director)"
+      faculty: "Mr. Vinod Nishad (Sports In-charge)"
     }
   },
   {
     id: "GAL005",
-    title: "Inter-School Basketball Finals",
-    category: "Sports",
-    desc: "The Mother's Pride Phoenix team clinching the regional dwarka championship with a stellar display of defense and teamwork.",
-    imgUrl: "https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=800&auto=format&fit=crop",
-    date: "Jan 22, 2026",
+    title: "Interactive Smart Projector Classroom",
+    category: "Labs",
+    desc: "Traditional lessons brought to life with smart projectors and digital audio/visual boards to help students master math and science.",
+    imgUrl: "/smart_projector.png",
+    date: "Jan 10, 2026",
     details: {
-      hardware: "Indoor Hardwood Court, electronic scoring boards",
-      software: "Tactics Planner Pro, Sports Video Analysis",
-      cohort: "Senior Boys & Girls Teams",
-      faculty: "Coach Gurpreet Singh"
+      hardware: "Smart HD Projectors, Modular Acoustic Classrooms",
+      software: "Interactive Visual Learning Slides",
+      cohort: "All Classes (Nursery - Grade X)",
+      faculty: "Mrs. Rashmi Dewangan"
     }
   },
   {
     id: "GAL006",
-    title: "Junior Badminton League",
-    category: "Sports",
-    desc: "Early athletic development in badminton court operations, fostering premium hand-eye coordination and reflex parameters.",
-    imgUrl: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=800&auto=format&fit=crop",
-    date: "May 02, 2026",
-    details: {
-      hardware: "Yonex carbon shuttle arrays, composite rackets",
-      software: "Rankings board system",
-      cohort: "Grades III - VI sports cohorts",
-      faculty: "Ms. Simran Kohli"
-    }
-  },
-  {
-    id: "GAL007",
     title: "Independence Day Cultural Parade",
     category: "Celebrations",
-    desc: "A patriotic parade of pride featuring classical music performances, tricolor flag hoisting, and localized theatre plays.",
-    imgUrl: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=800&auto=format&fit=crop",
+    desc: "Patriotic hoisting of the national tricolor followed by traditional dances and patriotic plays at the Arang campus.",
+    imgUrl: "/cultural_parade.png",
     date: "August 15, 2025",
     details: {
-      hardware: "Premium Sound Array System, Brass Instruments",
-      software: "Audio Mixer Engine",
-      cohort: "Pre-K to Grade X Cultural Guilds",
-      faculty: "Mrs. Meenakshi Iyer"
-    }
-  },
-  {
-    id: "GAL008",
-    title: "Annual Day Music & Stage Drama Gala",
-    category: "Celebrations",
-    desc: "A theatrical production performed in the auditorium, fusing classical dances with futuristic AI story narrative models.",
-    imgUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop",
-    date: "November 14, 2025",
-    details: {
-      hardware: "Smart Stage Lighting nodes, automated backdrop arrays",
-      software: "DMX Light Composer, Soundscape Engine",
-      cohort: "120+ Student Performers",
-      faculty: "Dr. Ananya Sharma, Mrs. Evelyn Carter"
-    }
-  },
-  {
-    id: "GAL009",
-    title: "Convocation Day Graduation Ceremony",
-    category: "Celebrations",
-    desc: "Graduating student caps flying high as the school honors academic excellence, leadership projects, and scholarship recipients.",
-    imgUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop",
-    date: "March 20, 2026",
-    details: {
-      hardware: "Auditorium Main Stage, Digital Display Screen",
-      software: "Registration and Alumni Portal Index",
-      cohort: "Grade X Graduating Class 2026",
-      faculty: "Executive Principal Board"
+      hardware: "Sound Systems, Traditional Brass instruments",
+      software: "Traditional Plays schedule",
+      cohort: "Nursery - Grade X Performers",
+      faculty: "Ms. Anjali Tiwari"
     }
   }
 ];
+
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -198,7 +157,7 @@ export default function GalleryPage() {
   }, [lightboxIndex, filteredData]);
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen text-[#0b2545] pb-20 relative">
+    <div className="bg-school-watermark min-h-screen text-[#0b2545] pb-20 relative">
       {/* Decorative Grid Mesh Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.05)_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
 

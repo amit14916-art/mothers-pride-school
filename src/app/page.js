@@ -15,7 +15,9 @@ import {
   CheckCircle,
   Users,
   Compass,
-  Laptop
+  Laptop,
+  Heart,
+  Sparkles
 } from "lucide-react";
 
 const NOTICES = [
@@ -48,11 +50,10 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const { error } = await supabase.from("Inquiries").insert({
+      const { error } = await supabase.from("inquiries").insert({
         name: inquiryName,
-        email: inquiryEmail,
-        message: inquiryMsg || "Quick Floating Widget Inquiry",
-        type: "Floating Quick Widget",
+        phone: inquiryEmail,
+        question: inquiryMsg || "Quick Floating Widget Inquiry",
       });
 
       if (error) throw error;
@@ -82,7 +83,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-slate-50 overflow-x-hidden bg-grid-pattern">
+    <div className="relative min-h-screen bg-school-watermark overflow-x-hidden">
       
       {/* Dynamic Alerts Ticker */}
       <section className="bg-academic-navy text-white py-2.5 overflow-hidden border-b border-white/5 relative z-10">
@@ -298,6 +299,283 @@ export default function Home() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Abhikalp Foundation NGO Social Mission Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50/40 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content column */}
+            <div className="lg:col-span-6 space-y-6 text-left">
+              <div className="inline-flex items-center space-x-2 bg-indigo-50 text-indigo-700 font-bold px-3 py-1.5 rounded-full text-xs uppercase tracking-wider border border-indigo-100">
+                <Heart className="h-3.5 w-3.5 text-rose-500 fill-rose-500" />
+                <span>Our Social Foundation</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#0b2545] leading-tight">
+                Powered by <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9e2a2b] to-[#ee9b00]">
+                  Abhikalp Foundation
+                </span>
+              </h2>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Mother's Pride School Arang is proudly operated as a private, unaided non-profit initiative by the <strong>Abhikalp Foundation</strong> (founded in 2004 by the family of Gaurav Girija Shukla). We believe that top-tier modern education, English proficiency, and technology literacy should not be limited by economic backgrounds.
+              </p>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Our campus opposite the Community Hall in Arang provides high-tech computer education, standard sports arenas, and value-based schooling to children from lower-middle-income, agricultural, and daily-wage backgrounds.
+              </p>
+              <div className="pt-2">
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-2 bg-[#0b2545] hover:bg-[#134074] text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow hover:shadow-lg"
+                >
+                  <span>View Charity Portfolios</span>
+                  <ArrowRight className="h-4 w-4 text-[#ee9b00]" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Initiatives cards column */}
+            <div className="lg:col-span-6 space-y-4">
+              {/* Card 1 */}
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                <div className="bg-rose-50 text-rose-600 p-3 rounded-xl flex-shrink-0 border border-rose-100">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-extrabold text-[#0b2545] text-sm uppercase">Sankalp Project (Education Sponsorship)</h4>
+                  <p className="text-slate-500 text-xs leading-relaxed">
+                    Sponsoring full educational kits, uniforms, and reference textbooks for children from underprivileged farming families in Arang.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                <div className="bg-amber-50 text-amber-600 p-3 rounded-xl flex-shrink-0 border border-amber-100">
+                  <Users className="h-5 w-5" />
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-extrabold text-[#0b2545] text-sm uppercase">Sambal & Sahayog Initiatives</h4>
+                  <p className="text-slate-500 text-xs leading-relaxed">
+                    A community-led platform connecting volunteers, digital resource donors, and senior instructors to teach kids standard programming and circuits.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                <div className="bg-emerald-50 text-emerald-600 p-3 rounded-xl flex-shrink-0 border border-emerald-100">
+                  <Award className="h-5 w-5" />
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-extrabold text-[#0b2545] text-sm uppercase">Complete Child Safety & Support</h4>
+                  <p className="text-slate-500 text-xs leading-relaxed">
+                    Providing safe classrooms, pure drinking water grids, clean school facilities, and certified educational support guides under rural supervision.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Real-time Instagram & Facebook Social feeds */}
+      <section className="py-20 bg-white/40 backdrop-blur-md border-t border-slate-205 relative overflow-hidden">
+        {/* Subtle decorative mesh */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(245,158,11,0.03),_transparent_350px)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(19,64,116,0.03),_transparent_350px)]"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold text-amber-600 uppercase tracking-widest bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/15 inline-flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Live Social Feed Update
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-[#0b2545] leading-none uppercase">
+              From Our Official Instagram & Facebook
+            </h2>
+            <div className="h-1 w-20 bg-[#9e2a2b] mx-auto rounded-full"></div>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+              We regularly publish academic portfolios, lab achievements, sports celebrations, and community sponsorships. Follow <strong>@mothersprideschool_arang</strong> on Facebook & Instagram.
+            </p>
+          </div>
+
+          {/* Social Posts Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Post 1: Instagram */}
+            <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                {/* Header */}
+                <div className="p-4 flex items-center justify-between border-b border-slate-100">
+                  <div className="flex items-center space-x-2.5">
+                    <span className="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-500 to-amber-500 p-0.5 flex items-center justify-center">
+                      <span className="w-full h-full rounded-full bg-[#0b2545] text-white font-extrabold text-[10px] flex items-center justify-center border border-white/10">MP</span>
+                    </span>
+                    <div>
+                      <span className="text-xs font-extrabold text-slate-800 block hover:underline cursor-pointer">mothersprideschool_arang</span>
+                      <span className="text-[9px] text-slate-400 font-semibold block uppercase">Arang, India</span>
+                    </div>
+                  </div>
+                  <span className="text-pink-600 bg-pink-55 border border-pink-100 font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full">Insta</span>
+                </div>
+                {/* Image */}
+                <div className="aspect-square relative overflow-hidden bg-slate-950">
+                  <img src="/arang_computer_lab.png" alt="Computer Lab" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                {/* Actions */}
+                <div className="p-4 space-y-2 text-xs">
+                  <div className="flex items-center justify-between text-[11px] font-bold text-slate-500">
+                    <span className="flex items-center gap-1.5 text-pink-600 cursor-pointer">
+                      ❤️ 142 Likes
+                    </span>
+                    <span>12 Comments</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed text-[11px]">
+                    <strong className="text-slate-800 mr-1.5">mothersprideschool_arang</strong>
+                    Our coding wizard cohorts building their first local database models in the upgraded computing lab! Supported by Gaurav Shukla & Abhikalp Foundation. 💻🚀 #codinglife #stem
+                  </p>
+                </div>
+              </div>
+              {/* Footer CTA */}
+              <div className="p-4 bg-slate-50 border-t border-slate-100">
+                <a href="https://instagram.com/mothersprideschool_arang/" target="_blank" className="w-full text-center block bg-gradient-to-r from-pink-600 to-amber-500 text-white font-bold text-xs py-2 rounded-xl shadow hover:shadow-md transition-shadow">
+                  View Instagram Post
+                </a>
+              </div>
+            </div>
+
+            {/* Post 2: Facebook */}
+            <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                {/* Header */}
+                <div className="p-4 flex items-center justify-between border-b border-slate-100">
+                  <div className="flex items-center space-x-2.5">
+                    <span className="w-9 h-9 rounded-full bg-blue-600 p-0.5 flex items-center justify-center">
+                      <span className="w-full h-full rounded-full bg-[#0b2545] text-white font-extrabold text-[10px] flex items-center justify-center border border-white/10">MP</span>
+                    </span>
+                    <div>
+                      <span className="text-xs font-extrabold text-slate-800 block hover:underline cursor-pointer">Mother's Pride School</span>
+                      <span className="text-[9px] text-slate-400 font-semibold block uppercase">Arang, Raipur</span>
+                    </div>
+                  </div>
+                  <span className="text-blue-600 bg-blue-55 border border-blue-100 font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full">Facebook</span>
+                </div>
+                {/* Image */}
+                <div className="aspect-square relative overflow-hidden bg-slate-950">
+                  <img src="/sankalp_kit_distribution.png" alt="Sankalp Kits" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                {/* Actions */}
+                <div className="p-4 space-y-2 text-xs">
+                  <div className="flex items-center justify-between text-[11px] font-bold text-slate-500">
+                    <span className="flex items-center gap-1.5 text-blue-600 cursor-pointer">
+                      👍 280 Likes
+                    </span>
+                    <span>34 Shares</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed text-[11px]">
+                    <strong className="text-slate-800 mr-1.5">Mother's Pride School</strong>
+                    Heartwarming moments from our annual 'Sankalp Project' sponsorship drive. Over 100 students received free educational packs and uniforms. Transforming lives under the leadership of Abhikalp Foundation. ❤️🎒 #givingback #community
+                  </p>
+                </div>
+              </div>
+              {/* Footer CTA */}
+              <div className="p-4 bg-slate-50 border-t border-slate-100">
+                <a href="https://facebook.com/mothersprideschool_arang/" target="_blank" className="w-full text-center block bg-blue-600 text-white font-bold text-xs py-2 rounded-xl shadow hover:shadow-md transition-shadow">
+                  View Facebook Post
+                </a>
+              </div>
+            </div>
+
+            {/* Post 3: Instagram */}
+            <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                {/* Header */}
+                <div className="p-4 flex items-center justify-between border-b border-slate-100">
+                  <div className="flex items-center space-x-2.5">
+                    <span className="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-500 to-amber-500 p-0.5 flex items-center justify-center">
+                      <span className="w-full h-full rounded-full bg-[#0b2545] text-white font-extrabold text-[10px] flex items-center justify-center border border-white/10">MP</span>
+                    </span>
+                    <div>
+                      <span className="text-xs font-extrabold text-slate-800 block hover:underline cursor-pointer">mothersprideschool_arang</span>
+                      <span className="text-[9px] text-slate-400 font-semibold block uppercase">Arang Campus</span>
+                    </div>
+                  </div>
+                  <span className="text-pink-600 bg-pink-55 border border-pink-100 font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full">Insta</span>
+                </div>
+                {/* Image */}
+                <div className="aspect-square relative overflow-hidden bg-slate-950">
+                  <img src="/sports_championships.png" alt="Sports Day" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                {/* Actions */}
+                <div className="p-4 space-y-2 text-xs">
+                  <div className="flex items-center justify-between text-[11px] font-bold text-slate-500">
+                    <span className="flex items-center gap-1.5 text-pink-600 cursor-pointer">
+                      ❤️ 189 Likes
+                    </span>
+                    <span>18 Comments</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed text-[11px]">
+                    <strong className="text-slate-800 mr-1.5">mothersprideschool_arang</strong>
+                    Vibrant athleticism on display! Red House breaks records in our 2-acre synthetic track sprints. Kudos to Mr. Vinod Nishad and sports mentors for this spectacular day! 🏆🏃‍♂️ #sportsday #fitindia #schoolchampions
+                  </p>
+                </div>
+              </div>
+              {/* Footer CTA */}
+              <div className="p-4 bg-slate-50 border-t border-slate-100">
+                <a href="https://instagram.com/mothersprideschool_arang/" target="_blank" className="w-full text-center block bg-gradient-to-r from-pink-600 to-amber-500 text-white font-bold text-xs py-2 rounded-xl shadow hover:shadow-md transition-shadow">
+                  View Instagram Post
+                </a>
+              </div>
+            </div>
+
+            {/* Post 4: Facebook */}
+            <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                {/* Header */}
+                <div className="p-4 flex items-center justify-between border-b border-slate-100">
+                  <div className="flex items-center space-x-2.5">
+                    <span className="w-9 h-9 rounded-full bg-blue-600 p-0.5 flex items-center justify-center">
+                      <span className="w-full h-full rounded-full bg-[#0b2545] text-white font-extrabold text-[10px] flex items-center justify-center border border-white/10">MP</span>
+                    </span>
+                    <div>
+                      <span className="text-xs font-extrabold text-slate-800 block hover:underline cursor-pointer">Mother's Pride School</span>
+                      <span className="text-[9px] text-slate-400 font-semibold block uppercase">Arang, Raipur</span>
+                    </div>
+                  </div>
+                  <span className="text-blue-600 bg-blue-55 border border-blue-100 font-extrabold text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full">Facebook</span>
+                </div>
+                {/* Image */}
+                <div className="aspect-square relative overflow-hidden bg-slate-950">
+                  <img src="/science_exhibition.png" alt="Science Exhibition" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                {/* Actions */}
+                <div className="p-4 space-y-2 text-xs">
+                  <div className="flex items-center justify-between text-[11px] font-bold text-slate-500">
+                    <span className="flex items-center gap-1.5 text-blue-600 cursor-pointer">
+                      👍 215 Likes
+                    </span>
+                    <span>14 Comments</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed text-[11px]">
+                    <strong className="text-slate-800 mr-1.5">Mother's Pride School</strong>
+                    Outstanding electronic prototypes and physics models built and wired entirely by our young technology guild during the Science & STEM fair. Deeply proud of their analytical spirit! 🔬💡⚙️ #stemeducation #creativity
+                  </p>
+                </div>
+              </div>
+              {/* Footer CTA */}
+              <div className="p-4 bg-slate-50 border-t border-slate-100">
+                <a href="https://facebook.com/mothersprideschool_arang/" target="_blank" className="w-full text-center block bg-blue-600 text-white font-bold text-xs py-2 rounded-xl shadow hover:shadow-md transition-shadow">
+                  View Facebook Post
+                </a>
+              </div>
+            </div>
+
+          </div>
+          
         </div>
       </section>
 

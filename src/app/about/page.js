@@ -7,75 +7,75 @@ const DEPARTMENTS = ["All", "Computer & AI", "Science & Robotics", "Mathematics"
 
 const TIMELINE_EVENTS = [
   {
-    year: "2012",
+    year: "2004",
     title: "The Foundation",
-    description: "Mother's Pride School was founded with a small cohort of 50 students, dedicated to personalized child guidance."
+    description: "Mother's Pride School, Arang was founded by Gaurav Girija Shukla's family under Abhikalp Foundation to provide quality English education in rural areas."
   },
   {
-    year: "2017",
-    title: "CBSE Affiliation",
-    description: "Accredited with national standard honors, achieving a 100% board examination pass-rate on first rollout."
+    year: "2009",
+    title: "English Medium Integration",
+    description: "Formally approved as a private English Medium High School to elevate educational and language standard guidelines in the Raipur district."
   },
   {
-    year: "2021",
-    title: "Hi-Tech Lab Launch",
-    description: "Built the school's primary embedded systems and computing center with full 1:1 screen provisions."
+    year: "2018",
+    title: "Smart Lab Launch",
+    description: "Established the primary computing centers and modular smart classrooms on campus to provide 1:1 computer literacy."
   },
   {
-    year: "2025",
-    title: "AI & Coding Integration",
-    description: "Became a premier pioneer, adding Python syntax coding, AI frameworks, and robotics to regular class grids."
+    year: "2026",
+    title: "Sankalp Charity Portfolios",
+    description: "Successfully launched Sankalp and Sahayog initiatives, sponsoring full education for underprivileged students from farming backgrounds."
   }
 ];
 
 const FACULTY = [
   {
-    name: "Dr. Ananya Sharma",
-    role: "Director & Principal",
+    name: "Gaurav Girija Shukla",
+    role: "Managing Director (Abhikalp)",
     dept: "Computer & AI",
-    degree: "Ph.D. in Computer Science (IIT)",
+    degree: "Founder, Abhikalp Foundation",
     image: "💻",
-    tag: "AI Ethics & Architecture"
+    tag: "Social Entrepreneurship"
   },
   {
-    name: "Prof. Rajesh Varma",
-    role: "Head of Science Dept.",
+    name: "Mr. S.P. Sahu",
+    role: "School Principal & Director",
     dept: "Science & Robotics",
-    degree: "M.Tech in Mechatronics",
-    image: "🤖",
-    tag: "Embedded Arduino & CAD"
+    degree: "M.Sc. in Physics, B.Ed.",
+    image: "👨‍🏫",
+    tag: "Academic Excellence"
   },
   {
-    name: "Mrs. Sarah D'Souza",
+    name: "Mrs. Rashmi Dewangan",
     role: "Senior Math Educator",
     dept: "Mathematics",
     degree: "M.Sc. in Applied Mathematics",
     image: "📐",
-    tag: "Algorithm Analysis & Stats"
+    tag: "Acoustic Seating Advisor"
   },
   {
-    name: "Mr. Vikram Rathore",
-    role: "AI & ML Specialist",
-    dept: "Computer & AI",
-    degree: "B.Tech in Artificial Intelligence",
-    image: "🐍",
-    tag: "Python & Machine Learning"
+    name: "Mr. R.K. Patel",
+    role: "Head of Science & Circuits",
+    dept: "Science & Robotics",
+    degree: "M.Tech in Electronics",
+    image: "⚙️",
+    tag: "Robotics Design Lab"
   },
   {
-    name: "Ms. Evelyn Carter",
+    name: "Miss Anjali Tiwari",
     role: "Humanities Coordinator",
     dept: "Humanities",
-    degree: "M.A. in English Literature & Arts",
+    degree: "M.A. in English Literature",
     image: "📚",
     tag: "Creative Writing & Debate"
   },
   {
-    name: "Mr. Amit Singhal",
-    role: "Robotics Design Lab Head",
+    name: "Mr. Vinod Nishad",
+    role: "Sports & STEM Lab Coordinator",
     dept: "Science & Robotics",
-    degree: "B.E. in Electronics & Instrumentation",
-    image: "⚙️",
-    tag: "Microcontrollers & IoT"
+    degree: "B.P.Ed. Athletics In-charge",
+    image: "🏃‍♂️",
+    tag: "Physical Education"
   }
 ];
 
@@ -87,7 +87,7 @@ export default function About() {
     : FACULTY.filter(f => f.dept === activeDept);
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-800 bg-grid-pattern pb-20">
+    <div className="bg-school-watermark min-h-screen text-slate-800 pb-20">
       
       {/* Banner / Breadcrumbs */}
       <section className="bg-academic-navy text-white py-16 text-center relative overflow-hidden">
@@ -138,12 +138,12 @@ export default function About() {
         <section className="bg-white border border-slate-200 rounded-2xl shadow-md p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-4 flex flex-col items-center text-center space-y-4">
             <div className="w-32 h-32 bg-academic-navy text-white rounded-full flex items-center justify-center text-5xl shadow-lg border-4 border-academic-gold select-none">
-              👩‍🏫
+              👨‍💼
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-800 uppercase">Dr. Ananya Sharma</h3>
-              <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Director & Principal</p>
-              <p className="text-xs text-indigo-600 font-semibold mt-1">Ph.D. in Computer Science (IIT)</p>
+              <h3 className="text-lg font-bold text-slate-800 uppercase">Gaurav Girija Shukla</h3>
+              <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Managing Director</p>
+              <p className="text-xs text-indigo-600 font-semibold mt-1">Founder, Abhikalp Foundation</p>
             </div>
           </div>
           
@@ -152,14 +152,14 @@ export default function About() {
               <h3 className="text-2xl font-black text-slate-800 uppercase tracking-tight">
                 Director's Message
               </h3>
-              <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Fostering standard intelligence with ethical digital rules</p>
+              <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Empowering rural minds with modern technology and value-based education</p>
             </div>
             
             <p className="text-slate-600 text-sm leading-relaxed italic">
-              "Dear Parents and Learners, in a landscape completely reshaped by neural networks, big data, and machine intelligence, educational standards cannot remain stagnant. At Mother's Pride, we do not view computing as a recreational activity; it is a fundamental language of expression. 
+              "Dear Parents and Friends, we believe that high-quality modern education, English medium proficiency, and digital skills are not luxury items—they are fundamental rights. In 2004, the Abhikalp Foundation laid the cornerstone of Mother's Pride School opposite the Community Hall in Arang to transform the lives of local children.
             </p>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Our vision is to blend CBSE academic curriculum discipline with advanced coding standards so your child graduates with cognitive elasticity and the tools needed to build our future world. We welcome you to experience our classrooms and coding laboratories."
+              We stand dedicated to offering top-tier computing courses, smart classrooms, and rigorous academics to children from diverse socioeconomic backgrounds, ensuring no child is left behind. Through our 'Sankalp' sponsorship and collaborative community support, we strive to build future leaders here in Arang. We welcome you to join our family."
             </p>
           </div>
         </section>

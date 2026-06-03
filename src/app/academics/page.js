@@ -79,7 +79,7 @@ export default function AcademicsPage() {
       });
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen text-[#0b2545] pb-20 relative">
+    <div className="bg-school-watermark min-h-screen text-[#0b2545] pb-20 relative">
       {/* Decorative Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.05)_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
 
